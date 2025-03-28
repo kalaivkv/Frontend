@@ -48,7 +48,7 @@ const FormComponent = () => {
     if (validate()) {
       try {
         const response = await axios.post(
-          "http://localhost:5000/register",
+          "http://localhost:5000/api/register",
           formData
         );
         alert(response.data.message);
@@ -61,9 +61,7 @@ const FormComponent = () => {
 
   return (
     <Container maxWidth="sm">
-      <Box
-        sx={{ p: 4, mt: 5, bgcolor: "white", borderRadius: 2, boxShadow: 3 }}
-      >
+      <Box sx={{ p: 4, mt: 5, bgcolor: "white", borderRadius: 2, boxShadow: 3 }}>
         <Typography variant="h5" align="center" gutterBottom>
           User Form
         </Typography>
